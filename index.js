@@ -7,8 +7,10 @@ button.addEventListener("click", async function () {
     const users = await res.json();
 
     //DOM操作
-    const list = document.createElement("li");
-    list.innerText = "foo";
-    lists.appendChild(list);
-    console.log(list);
+    users.forEach(function(user) {
+        const list = document.createElement("li");
+        list.innerText = "foo";
+        lists.appendChild(list);
+        console.log(list);
+    })
 })
